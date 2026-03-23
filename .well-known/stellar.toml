@@ -1,0 +1,15 @@
+NETWORK_PASSPHRASE="Pi Testnet"
+
+[DOCUMENTATION]
+ORG_NAME="ScoutMe"
+ORG_URL="https://scoutme-apk.netlify.app"
+ORG_DESCRIPTION="ScoutMe Token for sports talent ecosystem"
+ORG_LOGO="https://scoutme-apk.netlify.app/logo.png"
+
+[[CURRENCIES]]
+code="SMTK"
+issuer="GDTAXNEMF6BYNZQTIOKMHO7GAHAMKWZIVL4HEB3UR4UA3QGOQSUZPIBP"
+display_name="SMToken"
+anchor_asset=false
+desc="ScoutMe token for sports talent ecosystem"
+image="https://scoutme-apk.netlify.app/logo.png"
