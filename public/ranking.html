@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe | ranking</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="ranking">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/public/dashboard.html">
+        <img src="/assets/images/logo.png" alt="ScoutMe logo" />
+        <span>ScoutMe</span>
+      </a>
+      <div class="topbar-actions">
+        <span id="top-username" class="chip">@guest</span>
+        <select id="global-language" class="lang-select"></select>
+        <button id="logout-btn" class="ghost-btn" data-i18n="auth.logout">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="sidebar glass-card">
+      <a class="brand" href="/public/dashboard.html">
+        <img src="/assets/images/logo.png" alt="ScoutMe logo" />
+        <span>ScoutMe</span>
+      </a>
+      <nav class="sidebar-nav">
+        <a href="/public/dashboard.html" data-link="dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="/public/profile.html" data-link="profile" data-i18n="nav.profile">Profile</a>
+        <a href="/public/ranking.html" data-link="ranking" data-i18n="nav.ranking">Ranking</a>
+        <a href="/public/transfer.html" data-link="transfer" data-i18n="nav.transfer">Transfers</a>
+        <a href="/public/chat.html" data-link="chat" data-i18n="nav.chat">Chat</a>
+        <a href="/public/hall.html" data-link="hall" data-i18n="nav.hall">Hall of Fame</a>
+        <a href="/public/metaverse.html" data-link="metaverse" data-i18n="nav.metaverse">Metaverse</a>
+      </nav>
+    </aside>
+
+    <section class="main-shell">
+      <div class="page-header">
+        <div>
+          <div class="eyebrow" id="page-eyebrow">ScoutMe</div>
+          <h1 id="page-title">Realtime Global Rankings</h1>
+          <p class="muted" id="page-description">Track the smartest leaderboard with sport and country filters plus SVG score rings.</p>
+        </div>
+        <div class="inline-actions" id="page-actions"></div>
+      </div>
+      <div id="page-root"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

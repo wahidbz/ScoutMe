@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe | Web3 Talent Discovery</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="landing">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/public/index.html">
+        <img src="/assets/images/logo.png" alt="ScoutMe logo" />
+        <span>ScoutMe</span>
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="/public/index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="/public/ranking.html" data-i18n="nav.ranking">Ranking</a>
+        <a class="nav-link" href="/public/hall.html" data-i18n="nav.hall">Hall of Fame</a>
+        <a class="nav-link" href="/public/metaverse.html" data-i18n="nav.metaverse">Metaverse</a>
+      </nav>
+      <div class="topbar-actions">
+        <select id="global-language" class="lang-select"></select>
+        <a class="btn" href="/public/login.html" data-i18n="auth.login">Login with Pi</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card glass-card neon">
+          <div class="eyebrow" data-i18n="landing.eyebrow">Global scouting, verified by Pi</div>
+          <h1 data-i18n="landing.title">Your talent. Their dream. One connection.</h1>
+          <p data-i18n="landing.subtitle">ScoutMe unifies multi-sport discovery, live rankings, direct transfer offers, Pi-powered upgrades, and an immersive metaverse hall for athletes and clubs worldwide.</p>
+          <div class="hero-actions">
+            <a class="btn" href="/public/login.html" data-i18n="landing.ctaPrimary">Start in Pi Browser</a>
+            <a class="ghost-btn" href="/public/dashboard.html" data-i18n="landing.ctaSecondary">Open dashboard</a>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><span data-i18n="landing.kpiSports">Sports</span><strong>30+</strong></div>
+            <div class="kpi"><span data-i18n="landing.kpiRanking">Live ranking</span><strong>24/7</strong></div>
+            <div class="kpi"><span data-i18n="landing.kpiPayments">Pi upgrades</span><strong>3</strong></div>
+          </div>
+        </div>
+        <div class="glass-card hero-card">
+          <img src="/assets/images/logo.png" alt="ScoutMe visual" style="width:min(100%,480px);margin:0 auto 24px;" />
+          <div class="cards-grid">
+            <div class="feature-card">
+              <h3 data-i18n="landing.feature1Title">Multi-sport identity</h3>
+              <p data-i18n="landing.feature1Text">Dynamic athlete profiles with sport-specific roles, stats, media, badges, and visibility controls.</p>
+            </div>
+            <div class="feature-card">
+              <h3 data-i18n="landing.feature2Title">Club transfer engine</h3>
+              <p data-i18n="landing.feature2Text">Offer, negotiate, accept, and promote historic moves directly from a real-time transfer board.</p>
+            </div>
+            <div class="feature-card">
+              <h3 data-i18n="landing.feature3Title">3D showcase</h3>
+              <p data-i18n="landing.feature3Text">Explore an A-Frame hall of fame, sport zones, and clickable player panels inside Pi Browser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h2 class="section-title" data-i18n="landing.stackTitle">Built for a startup launch</h2>
+            <p class="section-subtitle" data-i18n="landing.stackSubtitle">Firebase powers authentication, Firestore sync, offline persistence, rules, ranking updates, transfers, messaging, and notifications.</p>
+          </div>
+        </div>
+        <div class="cards-grid">
+          <div class="feature-card"><h3>Pi Auth</h3><p data-i18n="landing.stackAuth">Authenticate with Pi, create user profiles, and sync wallet-aware actions to Firestore.</p></div>
+          <div class="feature-card"><h3>Realtime Firestore</h3><p data-i18n="landing.stackData">Leaderboard, messages, offers, hall-of-fame cards, and dashboards react instantly with listeners.</p></div>
+          <div class="feature-card"><h3>i18n + RTL</h3><p data-i18n="landing.stackI18n">Eleven languages, persistent preferences, and Arabic right-to-left rendering are built in.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> ScoutMe · Pi Browser ready.</div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
