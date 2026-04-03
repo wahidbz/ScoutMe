@@ -1,0 +1,12 @@
+
+APP_NAME="ScoutMe"
+APP_URL="https://scoutme-sports.netlify.app"
+APP_DESCRIPTION="ScoutMe is a decentralized sports talent discovery platform powered by SMTK token."
+APP_LOGO="https://scoutme-sports.netlify.app/image/logo/logo.png"
+
+[[TOKENS]]
+code="SMTK"
+issuer="GDTAXNEMF6BYNZQTIOKMHO7GAHAMKWZIVL4HEB3UR4UA3QGOQSUZPIBP"
+name="ScoutMe Token"
+description="Utility token for ScoutMe sports talent ecosystem"
+icon="https://scoutme-sports.netlify.app/image/logo/logo.png"
