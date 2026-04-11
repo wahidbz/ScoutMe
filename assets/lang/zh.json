@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "欢迎回来",
+    "logout": "登出",
+    "search": "搜索...",
+    "save": "保存更改",
+    "cancel": "取消",
+    "loading": "加载中...",
+    "no_data": "未找到信息。",
+    "view_more": "查看更多",
+    "status": "状态",
+    "connected": "已连接",
+    "offline": "离线",
+    "subtitle": "Pi浏览器内的Web3星探"
+  },
+  "nav": {
+    "explore": "探索",
+    "missions": "任务",
+    "mining": "挖矿",
+    "spin": "抽奖",
+    "rankings": "排名",
+    "transfers": "转会",
+    "messages": "消息",
+    "hall": "名人堂",
+    "metaverse": "元宇宙",
+    "ecosystem": "生态系统",
+    "network": "网络",
+    "ranking": "排名",
+    "transfer": "转会",
+    "menu": "菜单"
+  },
+  "hero": {
+    "title": "才华与机遇相遇之地",
+    "subtitle": "Pi 浏览器官方体育探索平台。挖掘 SMTK 代币，展示您的技能，并与全球球探建立联系。",
+    "cta_launch": "在 Pi 浏览器中启动",
+    "cta_demo": "查看演示仪表板",
+    "badge_pi": "Pi网络生态系统",
+    "badge_web3": "Web3星探",
+    "badge_rewards": "SMTK奖励"
+  },
+  "mining": {
+    "title": "SMTK 挖矿核心",
+    "start": "开始 24 小时会话",
+    "claim": "领取奖励",
+    "remaining": "剩余",
+    "ready": "准备领取",
+    "active": "活动中",
+    "idle": "空闲"
+  },
+  "spin": {
+    "title": "球探转盘",
+    "free": "免费转动",
+    "extra": "额外转动",
+    "history": "上次奖励"
+  },
+  "dashboard": {
+    "title": "球探情报",
+    "performance": "每周表现",
+    "active_missions": "活动任务",
+    "recent_activity": "最近活动",
+    "active_streak": "连续活跃",
+    "total_smtk": "SMTK余额",
+    "ai_potential": "AI潜力",
+    "videos": "视频",
+    "momentum": "每周动态",
+    "scout_progress": "星探进度",
+    "actions": "快速操作",
+    "loop_active": "循环活跃",
+    "trending": "热门人才",
+    "smart": "智能推荐",
+    "plans": "Pi支付计划",
+    "growth": "病毒式增长",
+    "referral_link": "推荐链接",
+    "copy_link": "复制链接"
+  },
+  "metrics": {
+    "sports": "综合体育",
+    "sports_hint": "足球，篮球等",
+    "regions": "全球区域",
+    "regions_hint": "支持RTL和LTR",
+    "trust": "信任指数",
+    "trust_hint": "经Pi验证"
+  },
+  "login": {
+    "title": "Pi 体育发现登录",
+    "desc": "使用Pi解锁ScoutMe。",
+    "mission_title": "任务循环",
+    "mission_desc": "每日任务和挖矿。",
+    "lang_title": "11种语言",
+    "lang_desc": "保存的首选项。",
+    "pi_title": "Pi支付",
+    "pi_desc": "提升您的个人资料。",
+    "button": "使用Pi Network继续",
+    "pi_notice": "在 Pi 浏览器中打开此页面以获得完整的身份验证和支付支持。",
+    "back_home": "返回首页",
+    "before_start": "在开始之前",
+    "connecting": "正在连接 Pi Network…"
+  },
+  "ecosystem": {
+    "title": "生态系统",
+    "mission": "每日任务",
+    "mission_desc": "完成任务。",
+    "mining": "24小时挖矿",
+    "mining_desc": "生成SMTK。",
+    "leaderboard": "排行榜",
+    "leaderboard_desc": "提升排名。"
+  },
+  "features": {
+    "ranking": "高级排名",
+    "ranking_desc": "人工智能评分。",
+    "synergy": "实时协同",
+    "synergy_desc": "直接发短信。",
+    "museum": "人才博物馆",
+    "museum_desc": "A-Frame展厅。"
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

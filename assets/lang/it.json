@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "Bentornato",
+    "logout": "Esci",
+    "search": "Cerca...",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "loading": "Caricamento...",
+    "no_data": "Nessuna info trovata.",
+    "view_more": "Vedi altro",
+    "status": "Stato",
+    "connected": "Connesso",
+    "offline": "Disconnesso",
+    "subtitle": "Scouting Web3 in Pi Browser"
+  },
+  "nav": {
+    "explore": "Esplora",
+    "missions": "Missioni",
+    "mining": "Estrazione",
+    "spin": "Gira",
+    "rankings": "Classifiche",
+    "transfers": "Trasferimenti",
+    "messages": "Messaggi",
+    "hall": "Hall of Fame",
+    "metaverse": "Metaverso",
+    "ecosystem": "Ecosistema",
+    "network": "Rete",
+    "ranking": "Classifica",
+    "transfer": "Trasferimenti",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Dove il Talento Incontra l'Opportunità",
+    "subtitle": "La piattaforma ufficiale Pi Browser per la scoperta sportiva. Estrai SMTK, mostra le abilità e connettiti con gli osservatori.",
+    "cta_launch": "Avvia in Pi Browser",
+    "cta_demo": "Vedi Dashboard",
+    "badge_pi": "Ecosistema Pi Network",
+    "badge_web3": "Scouting Web3",
+    "badge_rewards": "Premi SMTK"
+  },
+  "mining": {
+    "title": "Cuore Mining SMTK",
+    "start": "Inizia Sessione 24h",
+    "claim": "Riscatta Premi",
+    "remaining": "rimanenti",
+    "ready": "Pronto al riscatto",
+    "active": "Attivo",
+    "idle": "Inattivo"
+  },
+  "spin": {
+    "title": "Giro dell'Osservatore",
+    "free": "Giro Gratis",
+    "extra": "Giro Extra",
+    "history": "Ultimo premio"
+  },
+  "dashboard": {
+    "title": "Intelligenza Scout",
+    "performance": "Performance Settimanale",
+    "active_missions": "Missioni Attive",
+    "recent_activity": "Attività Recente",
+    "active_streak": "Serie attiva",
+    "total_smtk": "Saldo SMTK",
+    "ai_potential": "Potenziale IA",
+    "videos": "Video",
+    "momentum": "Dinamica Settimanale",
+    "scout_progress": "Progresso Scout",
+    "actions": "Azioni rapide",
+    "loop_active": "Ciclo attivo",
+    "trending": "Talenti di tendenza",
+    "smart": "Raccomandazioni",
+    "plans": "Piani Pi",
+    "growth": "Crescita",
+    "referral_link": "Link di invito",
+    "copy_link": "Copia link"
+  },
+  "metrics": {
+    "sports": "Sport Integrati",
+    "sports_hint": "Calcio, Basket, ecc.",
+    "regions": "Regioni Globali",
+    "regions_hint": "Supporto RTL e LTR",
+    "trust": "Indice di Fiducia",
+    "trust_hint": "Verificato da Pi"
+  },
+  "login": {
+    "title": "Accesso Pi per lo sport.",
+    "desc": "Usa Pi per sbloccare ScoutMe.",
+    "mission_title": "Ciclo di missioni",
+    "mission_desc": "Missioni e mining.",
+    "lang_title": "11 lingue",
+    "lang_desc": "Preferenze salvate.",
+    "pi_title": "Pagamenti Pi",
+    "pi_desc": "Aumenta il tuo profilo.",
+    "button": "Continua con Pi",
+    "pi_notice": "Apri questa pagina nel browser Pi per il supporto completo di autenticazione e pagamento.",
+    "back_home": "Torna alla home",
+    "before_start": "Prima di iniziare",
+    "connecting": "Connessione a Pi Network…"
+  },
+  "ecosystem": {
+    "title": "Ecosistema",
+    "mission": "Missione",
+    "mission_desc": "Completa compiti.",
+    "mining": "Estrazione 24h",
+    "mining_desc": "Genera SMTK.",
+    "leaderboard": "Classifica",
+    "leaderboard_desc": "Sali di grado."
+  },
+  "features": {
+    "ranking": "Ranking IA",
+    "ranking_desc": "Tracciamento avanzato.",
+    "synergy": "Sinergia",
+    "synergy_desc": "Messaggi diretti.",
+    "museum": "Museo",
+    "museum_desc": "Sala A-Frame."
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

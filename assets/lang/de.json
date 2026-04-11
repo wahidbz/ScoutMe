@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "Willkommen zurück",
+    "logout": "Abmelden",
+    "search": "Suche...",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "loading": "Laden...",
+    "no_data": "Keine Infos gefunden.",
+    "view_more": "Mehr anzeigen",
+    "status": "Status",
+    "connected": "Verbunden",
+    "offline": "Offline",
+    "subtitle": "Web3-Scouting im Pi-Browser"
+  },
+  "nav": {
+    "explore": "Erkunden",
+    "missions": "Missionen",
+    "mining": "Bergbau",
+    "spin": "Drehen",
+    "rankings": "Rankings",
+    "transfers": "Transfers",
+    "messages": "Nachrichten",
+    "hall": "Ruhmeshalle",
+    "metaverse": "Metaverse",
+    "ecosystem": "Ökosystem",
+    "network": "Netzwerk",
+    "ranking": "Rangliste",
+    "transfer": "Transfers",
+    "menu": "Menü"
+  },
+  "hero": {
+    "title": "Wo Talent auf Chancen trifft",
+    "subtitle": "Die offizielle Pi Browser-Plattform für Sportentdeckungen. Mine SMTK, zeige dein Können und vernetze dich mit Scouts weltweit.",
+    "cta_launch": "Im Pi Browser starten",
+    "cta_demo": "Demo Dashboard anzeigen",
+    "badge_pi": "Pi-Netzwerk-Ökosystem",
+    "badge_web3": "Web3 Scouting",
+    "badge_rewards": "SMTK-Belohnungen"
+  },
+  "mining": {
+    "title": "SMTK-Mining-Kern",
+    "start": "24h-Sitzung starten",
+    "claim": "Belohnungen abholen",
+    "remaining": "verbleibend",
+    "ready": "Abholbereit",
+    "active": "Aktiv",
+    "idle": "Inaktiv"
+  },
+  "spin": {
+    "title": "Scout-Glücksrad",
+    "free": "Gratis-Dreh",
+    "extra": "Extra-Dreh",
+    "history": "Letzte Belohnung"
+  },
+  "dashboard": {
+    "title": "Scouting-Intelligenz",
+    "performance": "Wöchentliche Leistung",
+    "active_missions": "Aktive Missionen",
+    "recent_activity": "Letzte Aktivitäten",
+    "active_streak": "Aktive Serie",
+    "total_smtk": "SMTK-Guthaben",
+    "ai_potential": "KI-Potenzial",
+    "videos": "Videos",
+    "momentum": "Wöchentliche Dynamik",
+    "scout_progress": "Scout-Fortschritt",
+    "actions": "Schnelle Aktionen",
+    "loop_active": "Schleife aktiv",
+    "trending": "Trendende Talente",
+    "smart": "Intelligente Empfehlungen",
+    "plans": "Pi-Zahlungspläne",
+    "growth": "Virales Wachstum",
+    "referral_link": "Empfehlungslink",
+    "copy_link": "Link kopieren"
+  },
+  "metrics": {
+    "sports": "Integrierte Sportarten",
+    "sports_hint": "Fußball, Basketball, usw.",
+    "regions": "Globale Regionen",
+    "regions_hint": "RTL- und LTR-Unterstützung",
+    "trust": "Vertrauensindex",
+    "trust_hint": "Zertifiziert durch Pi"
+  },
+  "login": {
+    "title": "Pi-Login für die Sportentdeckung.",
+    "desc": "Verwenden Sie Pi, um ScoutMe zu entsperren.",
+    "mission_title": "Missionsschleife",
+    "mission_desc": "Tägliche Missionen und Bergbau.",
+    "lang_title": "11 Sprachen",
+    "lang_desc": "Gespeicherte Einstellungen.",
+    "pi_title": "Pi-Zahlungen",
+    "pi_desc": "Steigern Sie Ihr Profil.",
+    "button": "Weiter mit Pi",
+    "pi_notice": "Öffnen Sie diese Seite im Pi Browser für volle Authentifizierungs- und Zahlungsunterstützung.",
+    "back_home": "Zurück zur Startseite",
+    "before_start": "Bevor Sie beginnen",
+    "connecting": "Verbindung mit Pi Network wird hergestellt…"
+  },
+  "ecosystem": {
+    "title": "Ökosystem",
+    "mission": "Tägliche Mission",
+    "mission_desc": "Aufgaben erfüllen.",
+    "mining": "24h Bergbau",
+    "mining_desc": "SMTK generieren.",
+    "leaderboard": "Bestenliste",
+    "leaderboard_desc": "Steigen Sie auf."
+  },
+  "features": {
+    "ranking": "KI-Ranking",
+    "ranking_desc": "Erweitertes Tracking.",
+    "synergy": "Synergie",
+    "synergy_desc": "Direktnachrichten.",
+    "museum": "Museum",
+    "museum_desc": "A-Frame-Halle."
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

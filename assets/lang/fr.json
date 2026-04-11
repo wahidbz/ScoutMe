@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "Bon retour",
+    "logout": "Déconnexion",
+    "search": "Rechercher...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "loading": "Chargement...",
+    "no_data": "Aucune information trouvée.",
+    "view_more": "Voir plus",
+    "status": "Statut",
+    "connected": "Connecté",
+    "offline": "Déconnecté",
+    "subtitle": "Le scouting Web3 dans Pi Browser"
+  },
+  "nav": {
+    "explore": "Explorer",
+    "missions": "Missions",
+    "mining": "Minage",
+    "spin": "Tourner",
+    "rankings": "Classements",
+    "transfers": "Transferts",
+    "messages": "Messages",
+    "hall": "Temple",
+    "metaverse": "Métavers",
+    "ecosystem": "Écosystème",
+    "network": "Réseau",
+    "ranking": "Classement",
+    "transfer": "Transferts",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Là où le Talent Rencontre l'Opportunité",
+    "subtitle": "La plateforme officielle du navigateur Pi pour la découverte sportive. Minez des jetons SMTK, montrez vos compétences et connectez-vous avec des recruteurs mondiaux.",
+    "cta_launch": "Lancer dans Pi Browser",
+    "cta_demo": "Voir le Tableau de Bord",
+    "badge_pi": "Écosystème Pi",
+    "badge_web3": "Scouting Web3",
+    "badge_rewards": "Récompenses SMTK"
+  },
+  "mining": {
+    "title": "Cœur du Minage SMTK",
+    "start": "Démarrer la Session 24h",
+    "claim": "Réclamer les Récompenses",
+    "remaining": "restant",
+    "ready": "Prêt à réclamer",
+    "active": "Actif",
+    "idle": "Inactif"
+  },
+  "spin": {
+    "title": "Roue du Recruteur",
+    "free": "Tour Gratuit",
+    "extra": "Tour Supplémentaire",
+    "history": "Dernière récompense"
+  },
+  "dashboard": {
+    "title": "Intelligence de Recrutement",
+    "performance": "Performance Hebdomadaire",
+    "active_missions": "Missions Actives",
+    "recent_activity": "Activité Récente",
+    "active_streak": "Série active",
+    "total_smtk": "Solde SMTK",
+    "ai_potential": "Potentiel IA",
+    "videos": "Vidéos",
+    "momentum": "Dynamique Hebdo",
+    "scout_progress": "Progression Scout",
+    "actions": "Actions rapides",
+    "loop_active": "Boucle active",
+    "trending": "Talents tendances",
+    "smart": "Recommandations IA",
+    "plans": "Forfaits Pi",
+    "growth": "Croissance virale",
+    "referral_link": "Lien de parrainage",
+    "copy_link": "Copier le lien"
+  },
+  "metrics": {
+    "sports": "Sports Intégrés",
+    "sports_hint": "Football, Basket, etc.",
+    "regions": "Régions Globales",
+    "regions_hint": "Support RTL & LTR",
+    "trust": "Indice de Confiance",
+    "trust_hint": "Vérifié par Pi"
+  },
+  "login": {
+    "title": "Connexion Pi pour le sport.",
+    "desc": "Utilisez Pi pour débloquer ScoutMe.",
+    "mission_title": "Boucle de mission",
+    "mission_desc": "Missions quotidiennes, minage.",
+    "lang_title": "11 langues",
+    "lang_desc": "Préférences sauvegardées.",
+    "pi_title": "Paiements Pi",
+    "pi_desc": "Boostez votre profil.",
+    "button": "Continuer avec Pi",
+    "pi_notice": "Ouvrez cette page dans le navigateur Pi pour un support complet d'authentification et de paiement.",
+    "back_home": "Retour à l'accueil",
+    "before_start": "Avant de commencer",
+    "connecting": "Connexion à Pi Network…"
+  },
+  "ecosystem": {
+    "title": "Écosystème",
+    "mission": "Mission Quotidienne",
+    "mission_desc": "Terminez des tâches.",
+    "mining": "Minage 24h",
+    "mining_desc": "Générez des SMTK.",
+    "leaderboard": "Classement",
+    "leaderboard_desc": "Montez en grade."
+  },
+  "features": {
+    "ranking": "Classement IA",
+    "ranking_desc": "Suivi avancé.",
+    "synergy": "Synergie",
+    "synergy_desc": "Messages d'équipe.",
+    "museum": "Musée",
+    "museum_desc": "Salle A-Frame."
+  },
+  "shop": {
+    "title": "Boutique Pi Sports",
+    "subtitle": "Boostez votre carrière avec Pi.",
+    "boost_name": "Boost de Profil",
+    "boost_desc": "7 jours de haute visibilité.",
+    "contact_name": "Contact Direct",
+    "contact_desc": "Débloquez l'accès aux messages.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Carte premium instantanée.",
+    "club_name": "Club Premium",
+    "club_desc": "30 jours de gestion avancée.",
+    "pay": "Payer avec Pi"
+  }
+}

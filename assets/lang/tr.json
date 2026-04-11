@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "वापसी पर स्वागत है",
+    "logout": "लॉगआउट",
+    "search": "खोजें...",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "loading": "लोड हो रहा है...",
+    "no_data": "कोई जानकारी नहीं मिली।",
+    "view_more": "और देखें",
+    "status": "स्थिति",
+    "connected": "जुड़े हुए",
+    "offline": "ऑफ़लाइन",
+    "subtitle": "Pi Tarayıcısı içinde Web3 scouting"
+  },
+  "nav": {
+    "explore": "Keşfet",
+    "missions": "Görevler",
+    "mining": "Madencilik",
+    "spin": "Çevir",
+    "rankings": "Sıralamalar",
+    "transfers": "Transferler",
+    "messages": "Mesajlar",
+    "hall": "Şöhretler Salonu",
+    "metaverse": "Metaverse",
+    "ecosystem": "Ekosistem",
+    "network": "Ağ",
+    "ranking": "Sıralama",
+    "transfer": "Transferler",
+    "menu": "Menü"
+  },
+  "hero": {
+    "title": "Yeteneğin Fırsatla Buluştuğu Yer",
+    "subtitle": "Spor keşfi için resmi Pi Tarayıcı platformu. SMTK madenciliği yapın, yeteneklerinizi sergileyin ve gözlemcilerle bağlantı kurun.",
+    "cta_launch": "Pi Tarayıcıda Başlat",
+    "cta_demo": "Demoyu Gör",
+    "badge_pi": "Pi Ağı Ekosistemi",
+    "badge_web3": "Web3 Scouting",
+    "badge_rewards": "SMTK Ödülleri"
+  },
+  "mining": {
+    "title": "SMTK Maden Özü",
+    "start": "24s Oturumu Başlat",
+    "claim": "Ödülü Al",
+    "remaining": "kalan",
+    "ready": "Alınmaya hazır",
+    "active": "Aktif",
+    "idle": "Boşta"
+  },
+  "spin": {
+    "title": "Günlük Çark",
+    "free": "Ücretsiz Çevir",
+    "extra": "Ekstra Çevir",
+    "history": "Son ödül"
+  },
+  "dashboard": {
+    "title": "Gözlemci Zekası",
+    "performance": "Haftalık Performans",
+    "active_missions": "Aktif Görevler",
+    "recent_activity": "Son Etkinlik",
+    "active_streak": "Aktif Seri",
+    "total_smtk": "SMTK Bakiyesi",
+    "ai_potential": "YZ Potansiyeli",
+    "videos": "Videolar",
+    "momentum": "Haftalık İvme",
+    "scout_progress": "Scout İlerlemesi",
+    "actions": "Hızlı işlemler",
+    "loop_active": "Döngü aktif",
+    "trending": "Popüler yetenekler",
+    "smart": "Akıllı öneriler",
+    "plans": "Pi ödeme planları",
+    "growth": "Viral büyüme",
+    "referral_link": "Tavsiye bağlantısı",
+    "copy_link": "Bağlantıyı kopyala"
+  },
+  "metrics": {
+    "sports": "Entegre Sporlar",
+    "sports_hint": "Futbol, Basketbol, vb.",
+    "regions": "Küresel Bölgeler",
+    "regions_hint": "RTL ve LTR desteği",
+    "trust": "Güven Endeksi",
+    "trust_hint": "Pi tarafından doğrulandı"
+  },
+  "login": {
+    "title": "Spor keşfi için Pi girişi.",
+    "desc": "ScoutMe kilidini açmak için Pi kullanın.",
+    "mission_title": "Görev döngüsü",
+    "mission_desc": "Günlük görevler ve madencilik.",
+    "lang_title": "11 dil",
+    "lang_desc": "Kaydedilen tercihler.",
+    "pi_title": "Pi Ödemeleri",
+    "pi_desc": "Profilinizi güçlendirin.",
+    "button": "Pi Ağı ile Devam Et",
+    "pi_notice": "Tam kimlik doğrulama ve ödeme desteği için bu sayfayı Pi Tarayıcı içinde açın.",
+    "back_home": "Anasayfaya dön",
+    "before_start": "Başlamadan önce",
+    "connecting": "Pi Network ile bağlantı kuruluyor…"
+  },
+  "ecosystem": {
+    "title": "Ekosistem",
+    "mission": "Günlük Görev",
+    "mission_desc": "Görevleri tamamla.",
+    "mining": "24 Saat Madencilik",
+    "mining_desc": "SMTK üretin.",
+    "leaderboard": "Liderler",
+    "leaderboard_desc": "Sıralamada yükselin."
+  },
+  "features": {
+    "ranking": "Yapay Zeka",
+    "ranking_desc": "Gelişmiş izleme.",
+    "synergy": "Sinerji",
+    "synergy_desc": "Direkt mesajlaşma.",
+    "museum": "Müze",
+    "museum_desc": "A-Frame salonu."
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

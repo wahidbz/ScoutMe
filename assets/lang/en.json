@@ -1,0 +1,167 @@
+{
+  "common": {
+    "welcome": "Welcome back",
+    "logout": "Logout",
+    "search": "Search...",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "no_data": "No information found.",
+    "view_more": "View More",
+    "status": "Status",
+    "connected": "Connected",
+    "offline": "Offline",
+    "subtitle": "Web3 scouting inside Pi Browser"
+  },
+  "nav": {
+    "ecosystem": "Ecosystem",
+    "network": "Network",
+    "explore": "Explore",
+    "missions": "Missions",
+    "mining": "Mining",
+    "spin": "Spin",
+    "ranking": "Ranking",
+    "transfer": "Transfers",
+    "messages": "Messages",
+    "hall": "Hall of Fame",
+    "metaverse": "Metaverse",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Where Talent Meets Opportunity",
+    "subtitle": "The official Pi Browser platform for sports discovery. Mine SMTK tokens, showcase your skills, and connect with global scouts.",
+    "cta_launch": "Launch inside Pi Browser",
+    "cta_demo": "View Demo Dashboard",
+    "badge_pi": "Pi Network Ecosystem",
+    "badge_web3": "Web3 Scouting",
+    "badge_rewards": "SMTK Rewards"
+  },
+  "mining": {
+    "title": "SMTK Mining Core",
+    "start": "Initialize 24h Session",
+    "claim": "Claim Rewards",
+    "remaining": "remaining",
+    "ready": "Ready to claim",
+    "active": "Active",
+    "idle": "Idle",
+    "status": "Node Status",
+    "speed": "Base Mining Rate"
+  },
+  "spin": {
+    "title": "Daily Scout Spin",
+    "free": "Free Spin",
+    "extra": "Use Extra Spin",
+    "history": "Last reward",
+    "play": "Play Now"
+  },
+  "dashboard": {
+    "total_smtk": "Total SMTK",
+    "platform_rank": "Platform Rank",
+    "active_streak": "Active Streak",
+    "daily_spins": "Daily Spins",
+    "overview": "Analytics Overview",
+    "unlock_advanced": "Unlock Advanced Analytics",
+    "unlock_cost": "Cost: 0.5 Pi",
+    "trending": "Trending talents",
+    "smart": "Smart recommendations",
+    "plans": "Pi payment plans",
+    "growth": "Viral growth",
+    "actions": "Quick actions",
+    "videos": "Videos"
+  },
+  "metrics": {
+    "sports": "Integrated Sports",
+    "sports_value": "12+",
+    "sports_hint": "Football, Basketball, Tennis & more",
+    "regions": "Global Regions",
+    "regions_value": "11",
+    "regions_hint": "Full RTL (Arabic) & LTR support",
+    "trust": "Trust Index",
+    "trust_value": "99%",
+    "trust_hint": "Verified by Pi Network Auth"
+  },
+  "ecosystem": {
+    "title": "Platform Ecosystem",
+    "mission": "Daily Mission Loop",
+    "mission_desc": "Complete tasks to earn XP and boost your scout visibility.",
+    "mining": "SMTK 24h Mining",
+    "mining_desc": "Activate your session daily to generate community tokens.",
+    "leaderboard": "Live Leaderboards",
+    "leaderboard_desc": "Climb the ranks and get noticed by professional clubs."
+  },
+  "features": {
+    "ranking": "Advanced Ranking",
+    "ranking_desc": "AI-driven potential scoring and verified activity tracking for elite talent discovery.",
+    "synergy": "Real-time Synergy",
+    "synergy_desc": "Direct messaging between scouts and players with persistence and instant notifications.",
+    "museum": "Museum of Talent",
+    "museum_desc": "Showcase your highlights in an immersive A-Frame metaverse hall for virtual scouting."
+  },
+  "login": {
+    "title": "Pi login for sports discovery.",
+    "desc": "Use Pi authentication to unlock the full ScoutMe loop, save your language, sport, level, streak, and wallet in Firestore, and auto-login on return.",
+    "mission_title": "Mission loop",
+    "mission_desc": "Daily missions, streaks, scout level, mining and spin rewards.",
+    "lang_title": "11 languages",
+    "lang_desc": "Arabic RTL included with persistent preference in Firestore.",
+    "pi_title": "Pi payments",
+    "pi_desc": "Boost profile, unlock contacts, Hall of Fame entry, club subscription.",
+    "button": "Continue with Pi Network",
+    "pi_notice": "Open this page inside Pi Browser for full authentication and payment support.",
+    "back_home": "Back to home",
+    "before_start": "Before you start",
+    "connecting": "Connecting with Pi Network…"
+  },
+  "missions": {
+    "title": "Daily Missions",
+    "points": "pts",
+    "claim": "Claim Reward",
+    "completed": "Completed",
+    "reset": "Missions reset in"
+  },
+  "ranking": {
+    "title": "Global Leaderboard",
+    "player": "Player",
+    "rating": "Rating",
+    "trend": "Trend",
+    "scout_action": "Scout Request",
+    "cost": "0.2 Pi"
+  },
+  "transfer": {
+    "title": "Transfer Market",
+    "market_value": "Market Value",
+    "status": "Status",
+    "bid": "Place Bid",
+    "available": "Available",
+    "signed": "Signed"
+  },
+  "chat": {
+    "title": "Direct Messages",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "empty": "No previous messages. Start a conversation!"
+  },
+  "profile": {
+    "title": "Player Profile",
+    "edit": "Edit Profile",
+    "wallet": "Linked Wallet",
+    "sport": "Sport",
+    "position": "Position",
+    "country": "Country",
+    "bio": "Bio",
+    "highlights": "Highlights"
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

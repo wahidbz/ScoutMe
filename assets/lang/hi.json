@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "वापसी पर स्वागत है",
+    "logout": "लॉगआउट",
+    "search": "खोजें...",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "loading": "लोड हो रहा है...",
+    "no_data": "कोई जानकारी नहीं मिली।",
+    "view_more": "और देखें",
+    "status": "स्थिति",
+    "connected": "जुड़े हुए",
+    "offline": "ऑफ़लाइन",
+    "subtitle": "Pi ब्राउज़र में Web3 स्काउटिंग"
+  },
+  "nav": {
+    "explore": "एक्सप्लोर करें",
+    "missions": "मिशन",
+    "mining": "माइनिंग",
+    "spin": "स्पिन",
+    "rankings": "रैंकिंग",
+    "transfers": "ट्रांसफर",
+    "messages": "संदेश",
+    "hall": "हॉल ऑफ फेम",
+    "metaverse": "मेटावर्स",
+    "ecosystem": "पारिस्थितिकी तंत्र",
+    "network": "नेटवर्क",
+    "ranking": "रैंकिंग",
+    "transfer": "ट्रांसफर",
+    "menu": "मेनू"
+  },
+  "hero": {
+    "title": "जहाँ प्रतिभा और अवसर मिलते हैं",
+    "subtitle": "खेल खोज के लिए आधिकारिक Pi ब्राउज़र प्लेटफ़ॉर्म। SMTK टोकन माइन करें, अपना कौशल दिखाएं और वैश्विक स्काउट्स के साथ जुड़ें।",
+    "cta_launch": "Pi ब्राउज़र में लॉन्च करें",
+    "cta_demo": "डेमो देखें",
+    "badge_pi": "Pi नेटवर्क इकोसिस्टम",
+    "badge_web3": "Web3 स्काउटिंग",
+    "badge_rewards": "SMTK इनाम"
+  },
+  "mining": {
+    "title": "SMTK माइनिंग कोर",
+    "start": "24 घंटे का सत्र शुरू करें",
+    "claim": "इनाम प्राप्त करें",
+    "remaining": "शेष",
+    "ready": "दावा करने के लिए तैयार",
+    "active": "सक्रिय",
+    "idle": "निष्क्रिय"
+  },
+  "spin": {
+    "title": "स्काउट स्पिन",
+    "free": "मुफ्त स्पिन",
+    "extra": "एक्स्ट्रा स्पिन",
+    "history": "पिछला इनाम"
+  },
+  "dashboard": {
+    "title": "स्काउट इंटेलिजेंस",
+    "performance": "साप्ताहिक प्रदर्शन",
+    "active_missions": "सक्रिय मिशन",
+    "recent_activity": "हालिया गतिविधि",
+    "active_streak": "सक्रिय सिलसिला",
+    "total_smtk": "SMTK बैलेंस",
+    "ai_potential": "एआई क्षमता",
+    "videos": "वीडियो",
+    "momentum": "साप्ताहिक गति",
+    "scout_progress": "स्काउट प्रगति",
+    "actions": "त्वरित कार्रवाई",
+    "loop_active": "लूप सक्रिय",
+    "trending": "ट्रेंडिंग टैलेंट",
+    "smart": "स्मार्ट सिफारिशें",
+    "plans": "Pi भुगतान योजना",
+    "growth": "वायरल विकास",
+    "referral_link": "रेफरल लिंक",
+    "copy_link": "लिंक कॉपी करें"
+  },
+  "metrics": {
+    "sports": "एकीकृत खेल",
+    "sports_hint": "फुटबॉल, बास्केटबॉल, आदि",
+    "regions": "वैश्विक क्षेत्र",
+    "regions_hint": "RTL और LTR समर्थन",
+    "trust": "विश्वास सूचकांक",
+    "trust_hint": "Pi द्वारा सत्यापित"
+  },
+  "login": {
+    "title": "खेल खोज के लिए Pi लॉगिन।",
+    "desc": "ScoutMe अनलॉक करने के लिए Pi का उपयोग करें।",
+    "mission_title": "मिशन लूप",
+    "mission_desc": "दैनिक मिशन और माइनिंग।",
+    "lang_title": "11 भाषाएं",
+    "lang_desc": "वरीयताएं सहेजी गईं।",
+    "pi_title": "Pi भुगतान",
+    "pi_desc": "अपना प्रोफाइल बढ़ाएं।",
+    "button": "Pi नेटवर्क के साथ जारी रखें",
+    "pi_notice": "पूर्ण प्रमाणीकरण और भुगतान समर्थन के लिए इस पृष्ठ को Pi ब्राउज़र के अंदर खोलें।",
+    "back_home": "होम पर वापस जाएं",
+    "before_start": "शुरू करने से पहले",
+    "connecting": "Pi नेटवर्क से कनेक्ट हो रहा है…"
+  },
+  "ecosystem": {
+    "title": "पारिस्थितिकी तंत्र",
+    "mission": "दैनिक मिशन",
+    "mission_desc": "कार्य पूरे करें।",
+    "mining": "24 घंटे माइनिंग",
+    "mining_desc": "SMTK जेनरेट करें।",
+    "leaderboard": "लीडरबोर्ड",
+    "leaderboard_desc": "रैंक बढ़ाएं।"
+  },
+  "features": {
+    "ranking": "उन्नत रैंकिंग",
+    "ranking_desc": "एआई स्मार्ट स्कोरिंग।",
+    "synergy": "रीयल-टाइम तालमेल",
+    "synergy_desc": "डायरेक्ट মেসেজিং।",
+    "museum": "टैलेंट का संग्रहालय",
+    "museum_desc": "ए-फ्रेम मेटावर्स।"
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}

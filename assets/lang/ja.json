@@ -1,0 +1,129 @@
+{
+  "common": {
+    "welcome": "お帰りなさい",
+    "logout": "ログアウト",
+    "search": "検索...",
+    "save": "変更を保存",
+    "cancel": "キャンセル",
+    "loading": "読み込み中...",
+    "no_data": "情報が見つかりません。",
+    "view_more": "もっと見る",
+    "status": "ステータス",
+    "connected": "接続中",
+    "offline": "オフライン",
+    "subtitle": "Piブラウザ内のWeb3スカウト"
+  },
+  "nav": {
+    "explore": "探索",
+    "missions": "ミッション",
+    "mining": "マイニング",
+    "spin": "スピン",
+    "rankings": "ランキング",
+    "transfers": "移籍",
+    "messages": "メッセージ",
+    "hall": "殿堂",
+    "metaverse": "メタバース",
+    "ecosystem": "エコシステム",
+    "network": "ネットワーク",
+    "ranking": "ランキング",
+    "transfer": "移籍",
+    "menu": "メニュー"
+  },
+  "hero": {
+    "title": "才能と機会が出会う場所",
+    "subtitle": "スポーツ発見のためのPiブラウザ公式プラットフォーム。SMTKトークンをマイニングし、スキルを披露し、世界のスカウトとつながりましょう。",
+    "cta_launch": "Piブラウザで起動",
+    "cta_demo": "デモボードを表示",
+    "badge_pi": "Piネットワークエコシステム",
+    "badge_web3": "Web3スカウト",
+    "badge_rewards": "SMTK報酬"
+  },
+  "mining": {
+    "title": "SMTKマイニングコア",
+    "start": "24時間セッション開始",
+    "claim": "報酬を受け取る",
+    "remaining": "残り",
+    "ready": "受け取り可能",
+    "active": "アクティブ",
+    "idle": "待機中"
+  },
+  "spin": {
+    "title": "スカウトスピン",
+    "free": "無料スピン",
+    "extra": "追加スピン",
+    "history": "前回の報酬"
+  },
+  "dashboard": {
+    "title": "スカウトインテリジェンス",
+    "performance": "週刊パフォーマンス",
+    "active_missions": "進行中のミッション",
+    "recent_activity": "最近のアクティビティ",
+    "active_streak": "アクティブな連続",
+    "total_smtk": "SMTK残高",
+    "ai_potential": "AIポテンシャル",
+    "videos": "動画",
+    "momentum": "毎週の勢い",
+    "scout_progress": "スカウトの進捗",
+    "actions": "クイックアクション",
+    "loop_active": "ループがアクティブ",
+    "trending": "注目タレント",
+    "smart": "スマートな推奨",
+    "plans": "Pi支払いプラン",
+    "growth": "バイラル成長",
+    "referral_link": "紹介リンク",
+    "copy_link": "リンクをコピー"
+  },
+  "metrics": {
+    "sports": "統合スポーツ",
+    "sports_hint": "サッカー、バスケなど",
+    "regions": "グローバル地域",
+    "regions_hint": "RTLおよびLTRサポート",
+    "trust": "信頼指数",
+    "trust_hint": "Piによる認証"
+  },
+  "login": {
+    "title": "スポーツ発見のためのPiログイン。",
+    "desc": "Piを使用してScoutMeのロックを解除します。",
+    "mission_title": "ミッションループ",
+    "mission_desc": "毎日のミッションとマイニング。",
+    "lang_title": "11の言語",
+    "lang_desc": "保存された設定。",
+    "pi_title": "Pi支払い",
+    "pi_desc": "プロフィールを強化する。",
+    "button": "Piネットワークで続行",
+    "pi_notice": "完全な認証と支払いサポートのために、Piブラウザ内でこのページを開いてください。",
+    "back_home": "ホームに戻る",
+    "before_start": "始める前に",
+    "connecting": "Pi Networkに接続中…"
+  },
+  "ecosystem": {
+    "title": "エコシステム",
+    "mission": "毎日のミッション",
+    "mission_desc": "タスクを完了する。",
+    "mining": "24時間マイニング",
+    "mining_desc": "SMTKを生成します。",
+    "leaderboard": "リーダーボード",
+    "leaderboard_desc": "ランクを上げる。"
+  },
+  "features": {
+    "ranking": "高度なランキング",
+    "ranking_desc": "AIによるスコアリング。",
+    "synergy": "リアルタイムの相乗効果",
+    "synergy_desc": "ダイレクトメッセージ。",
+    "museum": "才能の博物館",
+    "museum_desc": "A-Frameホール。"
+  },
+  "shop": {
+    "title": "Pi Sports Shop",
+    "subtitle": "Boost your career with Pi tokens.",
+    "boost_name": "Profile Boost",
+    "boost_desc": "7 days of high visibility to scouts.",
+    "contact_name": "Direct Contact",
+    "contact_desc": "Unlock message access to any club.",
+    "hall_name": "Hall of Fame",
+    "hall_desc": "Instant premium card in the Metaverse.",
+    "club_name": "Club Premium",
+    "club_desc": "30 days of advanced club management.",
+    "pay": "Pay with Pi"
+  }
+}
