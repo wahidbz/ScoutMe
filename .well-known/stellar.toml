@@ -8,9 +8,8 @@ ORG_LOGO="https://scoutme-sp.netlify.app/image/logo/logo.png"
 
 [[CURRENCIES]]
 code="SMTK"
-issuer="GDTAXNEMF6BYNZQTIOKMHO7GAHAMKWZIVL4HEB3UR4UA3QGOQSUZPIBP"
-display_name="SMToken"
+issuer="GDOU4DACEIG4CFJYQ4I4FNG3QXNQEUWFS7VFNDPDQ44DB2AAEWWDEY5L"
 name="ScoutMe Token"
-anchor_asset=false
 desc="ScoutMe token for sports talent ecosystem"
+display_decimals=2
 image="https://scoutme-sp.netlify.app/image/logo/logo.png"
