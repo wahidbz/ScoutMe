@@ -1,0 +1,36 @@
+{
+  "name": "ScoutMe Global Sports Ecosystem",
+  "short_name": "ScoutMe",
+  "description": "ScoutMe — Web3 talent discovery, scouting, and sports metaverse inside Pi Browser.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#060b16",
+  "theme_color": "#FFD700",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["sports", "social", "finance"],
+  "shortcuts": [
+    {
+      "name": "Missions",
+      "url": "missions.html",
+      "icons": [{ "src": "assets/images/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Mining",
+      "url": "mining.html",
+      "icons": [{ "src": "assets/images/logo.png", "sizes": "192x192" }]
+    }
+  ]
+}

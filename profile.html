@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe â€” Profile</title>
+  <meta name="theme-color" content="#060b16" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="/assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script src="/js/firebase.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/ai.js"></script>
+  <script src="/js/database.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/payment.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app-shell"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const me = await App.start({ title: 'Profile', subtitle: 'Dynamic sport profile, videos, and trust score.', requireProfile: true });
+      const page = document.getElementById('page-content');
+      const params = new URLSearchParams(location.search);
+      const viewUid = params.get('uid') || me.uid;
+      const isOwn = viewUid === me.uid;
+      const user = await DB.getUser(viewUid);
+      const talent = await DB.getTalent(viewUid);
+      const statKeys = App.SPORT_FIELDS[user.sport] || ['speed', 'technique', 'tactical', 'consistency'];
+      const positions = App.SPORT_POSITIONS[user.sport] || ['Prospect'];
+      const links = talent?.highlightLinks || [];
+
+      page.innerHTML = `
+        <section class="glass panel">
+          <div class="row-between">
+            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+              <div class="avatar xl">${Utils.initials(user.username)}</div>
+              <div>
+                <h2 class="mt-0 mb-0">${Utils.escapeHTML(user.username)}</h2>
+                <div class="text-muted mt-1">${App.sportLabel(user.sport)} â€¢ ${Utils.escapeHTML(user.country || 'Global')} â€¢ ${Utils.escapeHTML(user.role || 'player')}</div>
+                <div class="badge-row mt-2">${(user.badges || ['Verified']).map((badge) => `<span class="badge ${badge.includes('Verified') ? 'green' : badge.includes('Legend') ? 'gold' : 'dark'}">${badge}</span>`).join('')}</div>
+              </div>
+            </div>
+            ${Utils.ringHTML(user.score || 0)}
+          </div>
+          <div class="notice mt-3">TrustScore <strong>${user.trustScore || 0}</strong> â€¢ AI Potential <strong>${user.aiPotential || 0}</strong> â€¢ Role system <strong>${Utils.escapeHTML(user.sportRole || 'Prospect')}</strong></div>
+        </section>
+
+        <section class="grid-2 mt-3">
+          <form class="glass panel stack" id="profile-form">
+            <h3 class="panel-title" data-i18n="\${isOwn ? 'profile.edit' : 'profile.snapshot'}">${isOwn ? 'Edit profile' : 'Player snapshot'}</h3>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" data-i18n="login.username">Username</label><input class="input" id="pf-username" value="${Utils.escapeHTML(user.username || '')}" ${isOwn ? '' : 'disabled'} /></div>
+              <div class="form-group"><label class="form-label" data-i18n="profile.country">Country</label><input class="input" id="pf-country" value="${Utils.escapeHTML(user.country || '')}" ${isOwn ? '' : 'disabled'} /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Sport</label><select class="select" id="pf-sport" ${isOwn ? '' : 'disabled'}>${App.SPORTS.map((sport) => `<option value="${sport.key}" ${sport.key === user.sport ? 'selected' : ''}>${sport.label}</option>`).join('')}</select></div>
+              <div class="form-group"><label class="form-label">Position</label><select class="select" id="pf-position" ${isOwn ? '' : 'disabled'}>${positions.map((position) => `<option value="${position}" ${position === user.sportRole ? 'selected' : ''}>${position}</option>`).join('')}</select></div>
+            </div>
+            <div class="form-group"><label class="form-label" data-i18n="profile.bio">Bio</label><textarea class="textarea" id="pf-bio" ${isOwn ? '' : 'disabled'}>${Utils.escapeHTML(user.bio || '')}</textarea></div>
+            <div class="form-row">${statKeys.map((key) => `<div class="form-group"><label class="form-label">${key}</label><input class="input" id="stat-${key}" type="number" min="1" max="99" value="${(talent?.stats || user.profileStats || {})[key] || 65}" ${isOwn ? '' : 'disabled'} /></div>`).join('')}</div>
+            ${isOwn ? '<button class="btn btn-primary" data-i18n="profile.save">Save profile</button>' : `<button type="button" class="btn btn-primary" id="unlock-contact" data-i18n="profile.unlock">Unlock contact • 2 Pi</button>`}
+          </form>
+          <section class="glass panel stack">
+            <h3 class="panel-title" data-i18n="profile.videos">🎬 Highlight videos</h3>
+            ${isOwn ? '<div class="form-group"><label class="form-label">Add highlight URL</label><div class="row-between" style="gap:10px"><input class="input" id="video-url" placeholder="YouTube or TikTok URL" /><button class="btn btn-secondary" id="add-video">Add</button></div></div>' : ''}
+            <div id="video-list" class="stack">${links.length ? links.map((url) => `<div class="video-preview glass soft panel">${Utils.getEmbedHTML(url) || `<div class="notice">${Utils.escapeHTML(url)}</div>`}</div>`).join('') : Utils.emptyState('ðŸŽ¥', 'No videos yet', 'Add highlights to improve ranking and trust.')}</div>
+          </section>
+        </section>
+      `;
+
+      if (isOwn) {
+        document.getElementById('profile-form').addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const sport = document.getElementById('pf-sport').value;
+          const stats = Object.fromEntries((App.SPORT_FIELDS[sport] || statKeys).map((key) => [key, Number(document.getElementById(`stat-${key}`)?.value || 0)]));
+          try {
+            await DB.updateUser(user.uid, {
+              username: document.getElementById('pf-username').value,
+              country: document.getElementById('pf-country').value,
+              sport,
+              sportRole: document.getElementById('pf-position').value,
+              bio: document.getElementById('pf-bio').value,
+              profileStats: stats,
+              stats: { ...(user.stats || {}), videos: (talent?.highlightLinks || []).length }
+            });
+            await DB.createOrMergeTalent(user.uid, {
+              sport,
+              positions: [document.getElementById('pf-position').value],
+              stats,
+              highlightLinks: talent?.highlightLinks || []
+            });
+            await DB.refreshDerivedUser(user.uid);
+            Utils.toast('success', 'Profile saved', 'Your profile has been updated.');
+            location.reload();
+          } catch (error) {
+            Utils.toast('error', 'Save failed', error.message || 'Unable to update profile.');
+          }
+        });
+
+        document.getElementById('add-video')?.addEventListener('click', async () => {
+          const input = document.getElementById('video-url');
+          const url = input.value.trim();
+          if (!url) return;
+          const nextLinks = [...new Set([...(talent?.highlightLinks || []), url])];
+          await DB.createOrMergeTalent(user.uid, { highlightLinks: nextLinks });
+          await DB.updateUser(user.uid, { stats: { ...(user.stats || {}), videos: nextLinks.length } });
+          await DB.refreshDerivedUser(user.uid);
+          Utils.toast('success', 'Video added', 'Highlight saved to your profile.');
+          location.reload();
+        });
+      } else {
+        document.getElementById('unlock-contact')?.addEventListener('click', async () => {
+          try {
+            await Payment.createPayment('unlock_contact', me, { targetUid: user.uid });
+          } catch (error) {
+            Utils.toast('error', 'Payment unavailable', error.message || 'Open inside Pi Browser.');
+          }
+        });
+      }
+      if (window.I18n) I18n.translateDOM(page);
+    });
+  </script>
+</body>
+</html>

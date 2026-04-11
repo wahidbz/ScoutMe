@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe â€” Hall of Fame</title>
+  <meta name="theme-color" content="#060b16" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app-shell"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await App.start({ title: 'Hall of Fame', subtitle: 'Completed deals, paid entries, and showcase moments.', requireProfile: true });
+      const page = document.getElementById('page-content');
+      page.innerHTML = `
+        <div class="row-between mb-3">
+          <div class="chips"><span class="chip gold" data-i18n="hall.verified">Verified entries</span><span class="chip green" data-i18n="hall.live">Firestore live</span></div>
+          <div class="filter-row"><select class="select" id="hall-sport" style="min-width:160px"><option value="">All sports</option>${App.SPORTS.map((sport) => `<option value="${sport.key}">${sport.label}</option>`).join('')}</select></div>
+        </div>
+        <div id="hall-grid" class="grid-auto"></div>
+      `;
+
+      let unsubscribe = null;
+      function subscribe() {
+        unsubscribe?.();
+        unsubscribe = DB.listenHall((entries) => {
+          const sport = document.getElementById('hall-sport').value;
+          const rows = sport ? entries.filter((entry) => entry.sport === sport) : entries;
+          document.getElementById('hall-grid').innerHTML = rows.length ? rows.map((entry) => `
+            <article class="hall-card glass soft">
+              <div class="row-between"><span class="badge gold">${entry.transferValue} ${entry.currency || 'PI'}</span><span class="small text-muted">${Utils.formatDate(entry.createdAt)}</span></div>
+              <h3 style="margin-bottom:8px">${Utils.escapeHTML(entry.playerName || 'Unknown')}</h3>
+              <div class="text-muted small">${Utils.escapeHTML(entry.clubName || 'ScoutMe')} â€¢ ${App.sportLabel(entry.sport)}</div>
+              <div class="badge-row mt-2"><span class="badge dark">${Utils.escapeHTML(entry.season || '2026')}</span><span class="badge green">${Utils.escapeHTML(entry.type || 'entry')}</span></div>
+            </article>
+          `).join('') : Utils.emptyState('ðŸ›ï¸', 'No Hall entries', 'Complete transfers or buy a Hall entry.');
+        }, { sport: document.getElementById('hall-sport').value });
+      }
+      document.getElementById('hall-sport').addEventListener('change', subscribe);
+      if (window.I18n) I18n.translateDOM(page);
+    });
+  </script>
+</body>
+</html>

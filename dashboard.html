@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe â€” Dashboard</title>
+  <meta name="theme-color" content="#060b16" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div id="app-shell"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const user = await App.start({ title: 'Dashboard', subtitle: 'Daily mission loop, ranking progress, and Web3 momentum.', requireProfile: true });
+      const page = document.getElementById('page-content');
+      const leaderboard = await DB.listUsers({ roles: ['player', 'club', 'scout', 'agent'] });
+      const recommendations = ScoutAI.recommendations(user, leaderboard);
+      const trending = ScoutAI.detectTrending(leaderboard.filter((row) => row.role === 'player'));
+      const shareUrl = `${location.origin}/profile.html?uid=${encodeURIComponent(user.uid)}`;
+      page.innerHTML = `
+        <section class="glass panel">
+          <div class="row-between">
+            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+              <div class="avatar xl">${Utils.initials(user.username)}</div>
+              <div>
+                <h2 class="mt-0 mb-0">Welcome back, ${Utils.escapeHTML(user.username)}</h2>
+                <div class="text-muted mt-1">${App.sportLabel(user.sport)} â€¢ ${Utils.escapeHTML(user.country || 'Global')} â€¢ ${Utils.escapeHTML(user.role || 'player')}</div>
+                <div class="badge-row mt-2">
+                  <span class="badge gold">Scout Level ${user.scoutLevel || 1}</span>
+                  <span class="badge green">Trust ${user.trustScore || 0}</span>
+                  ${(user.badges || ['Verified']).map((badge) => `<span class="badge dark">${badge}</span>`).join('')}
+                </div>
+              </div>
+            </div>
+            ${Utils.ringHTML(user.score || 0)}
+          </div>
+          <div class="metric-grid mt-4">
+          <div class="metric-grid mt-4">
+            <div class="metric-card"><div class="label" data-i18n="dashboard.active_streak">Mission streak</div><div class="value">${user.streak || 0}</div><div class="hint" data-i18n="dashboard.streak_hint">Keep the loop alive daily.</div></div>
+            <div class="metric-card"><div class="label" data-i18n="dashboard.total_smtk">SMTK balance</div><div class="value">${Number((user.balances || {}).smtk || 0).toFixed(2)}</div><div class="hint" data-i18n="dashboard.smtk_hint">Claim from mining + spin rewards.</div></div>
+            <div class="metric-card"><div class="label" data-i18n="dashboard.ai_potential">AI potential</div><div class="value">${user.aiPotential || 0}</div><div class="hint" data-i18n="dashboard.ai_hint">Prediction for scout breakout.</div></div>
+            <div class="metric-card"><div class="label" data-i18n="dashboard.videos">Videos</div><div class="value">${(user.stats || {}).videos || 0}</div><div class="hint">Highlights improve ranking.</div></div>
+          </div>
+        </section>
+
+        <section class="grid-2 mt-3">
+          <div class="glass panel">
+            <div class="row-between mb-2"><h3 class="panel-title">📊 <span data-i18n="dashboard.momentum">Weekly scout momentum</span></h3><a class="btn btn-secondary btn-sm" href="/missions.html" data-i18n="nav.missions">Open missions</a></div>
+            ${Utils.weekChartHTML(Utils.randomWeeklyValues())}
+            <div class="progress-wrap mt-3">
+              <div class="progress-caption" data-i18n="dashboard.scout_progress">Scout level progress</div>
+              <div class="progress-bar"><span style="width:${Math.min(100, (user.scoutLevelXp || 0) % 100)}%"></span></div>
+            </div>
+          </div>
+          <div class="glass panel">
+            <div class="row-between mb-2"><h3 class="panel-title">⚡ <span data-i18n="dashboard.actions">Quick actions</span></h3><span class="badge green" data-i18n="dashboard.loop_active">Loop active</span></div>
+            <div class="grid-2">
+              <a class="btn btn-primary" href="mining.html" data-i18n="nav.mining">Start mining</a>
+              <a class="btn btn-secondary" href="spin.html" data-i18n="nav.spin">Daily spin</a>
+              <a class="btn btn-secondary" href="ranking.html" data-i18n="nav.ranking">Open ranking</a>
+              <a class="btn btn-secondary" href="chat.html" data-i18n="nav.messages">Open chat</a>
+            </div>
+            <div class="notice mt-3"><span data-i18n="dashboard.referral_link">Referral link:</span> <strong>${shareUrl}</strong></div>
+            <div class="page-actions mt-2"><button class="btn btn-secondary btn-sm" id="copy-share" data-i18n="dashboard.copy_link">Copy share link</button></div>
+          </div>
+        </section>
+
+        <section class="grid-2 mt-3">
+          <div class="glass panel">
+            <div class="row-between mb-2"><h3 class="panel-title">🔥 <span data-i18n="dashboard.trending">Trending talents</span></h3><a class="btn btn-secondary btn-sm" href="hall.html" data-i18n="nav.hall">Hall of Fame</a></div>
+            <div class="card-list">${trending.length ? trending.map((player) => `<div class="transfer-card"><div class="row-between"><div><strong>${Utils.escapeHTML(player.username)}</strong><div class="small text-muted mt-1">${App.sportLabel(player.sport)} â€¢ Trend ${player.trendScore}</div></div><span class="badge gold">${player.score}</span></div></div>`).join('') : Utils.emptyState('ðŸ“ˆ', 'No trends yet', 'Complete onboarding and seed data first.')}</div>
+          </div>
+          <div class="glass panel">
+            <div class="row-between mb-2"><h3 class="panel-title">🤖 <span data-i18n="dashboard.smart">Smart recommendations</span></h3><a class="btn btn-secondary btn-sm" href="/profile.html" data-i18n="nav.explore">Update profile</a></div>
+            <div class="card-list">${recommendations.length ? recommendations.map((item) => `<div class="transfer-card"><strong>${Utils.escapeHTML(item.username)}</strong><div class="small text-muted mt-1">${item.reason} â€¢ ${App.sportLabel(item.sport)}</div></div>`).join('') : Utils.emptyState('ðŸ§ ', 'No recommendations yet', 'More users unlock smarter matching.')}</div>
+          </div>
+        </section>
+
+        <section class="grid-2 mt-3">
+          <div class="glass panel"><div class="row-between mb-2"><h3 class="panel-title">💸 <span data-i18n="dashboard.plans">Pi payment plans</span></h3><span class="badge dark">Wallet ${Payment.WALLET.slice(0, 6)}…</span></div><div class="card-list" id="payment-plans-container">${Payment.plansHTML()}</div></div>
+          <div class="glass panel"><h3 class="panel-title">🌱 <span data-i18n="dashboard.growth">Viral growth</span></h3><div class="timeline"><div class="timeline-item"><strong>Referral code</strong><div class="small text-muted mt-1">${Utils.escapeHTML(user.referralCode || 'N/A')}</div></div><div class="timeline-item"><strong>Invite reward</strong><div class="small text-muted mt-1">Every successful invite can unlock extra spins and scout badges.</div></div><div class="timeline-item"><strong>Social incentive</strong><div class="small text-muted mt-1">Share your player link to attract scouts and clubs.</div></div></div></div>
+        </section>
+      `;
+
+      document.getElementById('copy-share').addEventListener('click', () => Utils.copyText(shareUrl, 'Share link copied.'));
+      page.querySelectorAll('[data-pay]').forEach((button) => button.addEventListener('click', async () => {
+        try {
+          await Payment.createPayment(button.dataset.pay, user, { source: 'dashboard' });
+        } catch (error) {
+          Utils.toast('error', 'Payment unavailable', error.message || 'Open in Pi Browser.');
+        }
+      }));
+      I18n.translateDOM(page);
+    });
+  </script>
+</body>
+
+</html>

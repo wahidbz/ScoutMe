@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScoutMe — Pi Login</title>
+  <meta name="theme-color" content="#060b16" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="login-shell">
+    <section class="login-side">
+      <div class="glass login-card">
+        <div class="login-brand">
+          <img src="assets/images/logo.png" alt="ScoutMe logo" />
+          <div>
+            <div class="brand-title text-gradient">ScoutMe</div>
+            <div class="text-muted small">Pi Browser onboarding</div>
+          </div>
+        </div>
+        <h1 class="mt-0" data-i18n="login.title">Pi login for sports discovery.</h1>
+        <p class="text-muted" data-i18n="login.desc">Use Pi.authenticate(['username','payments']) to unlock the full ScoutMe loop, save your language, sport, level, streak, and wallet in Firestore, and auto-login on return.</p>
+        <div class="feature-points mt-3">
+          <div class="feature-point"><i data-lucide="check-circle-2" style="color: #00c853;"></i><div><strong data-i18n="login.mission_title">Mission loop</strong><div class="small text-muted" data-i18n="login.mission_desc">Daily missions, streaks, scout level, mining and spin rewards.</div></div></div>
+          <div class="feature-point"><i data-lucide="languages" style="color: #27c2ff;"></i><div><strong data-i18n="login.lang_title">11 languages</strong><div class="small text-muted" data-i18n="login.lang_desc">Arabic RTL included with persistent preference in Firestore.</div></div></div>
+          <div class="feature-point"><i data-lucide="credit-card" style="color: #ffd700;"></i><div><strong data-i18n="login.pi_title">Pi payments</strong><div class="small text-muted" data-i18n="login.pi_desc">Boost profile, unlock contacts, Hall of Fame entry, club subscription.</div></div></div>
+        </div>
+        <div class="page-actions mt-4">
+          <button class="btn btn-primary btn-block" id="pi-login-btn" data-i18n="login.button">Continue with Pi Network</button>
+        </div>
+        <div class="notice warning mt-3" data-i18n="login.pi_notice">Open this page inside Pi Browser for full authentication and payment support.</div>
+        <div class="page-actions mt-3">
+          <a class="btn btn-secondary btn-sm" href="/index.html" data-i18n="login.back_home">Back to home</a>
+        </div>
+      </div>
+    </section>
+    <section class="login-side">
+      <div class="glass login-card">
+        <h3 class="panel-title" data-i18n="login.before_start">Before you start</h3>
+        <div class="lang-grid">
+          <div class="select-card" onclick="I18n.load('en')">🇺🇸 English</div>
+          <div class="select-card" onclick="I18n.load('ar')">🇸🇦 العربية</div>
+          <div class="select-card" onclick="I18n.load('fr')">🇫🇷 Français</div>
+          <div class="select-card" onclick="I18n.load('es')">🇪🇸 Español</div>
+          <div class="select-card" onclick="I18n.load('pt')">🇧🇷 Português</div>
+          <div class="select-card" onclick="I18n.load('de')">🇩🇪 Deutsch</div>
+          <div class="select-card" onclick="I18n.load('it')">🇮🇹 Italiano</div>
+          <div class="select-card" onclick="I18n.load('tr')">🇹🇷 Türkçe</div>
+          <div class="select-card" onclick="I18n.load('hi')">🇮🇳 हिन्दी</div>
+          <div class="select-card" onclick="I18n.load('zh')">🇨🇳 中文</div>
+          <div class="select-card" onclick="I18n.load('ja')">🇯🇵 日本語</div>
+        </div>      </div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="onboarding-modal">
+    <div class="modal">
+      <div class="row-between"><h3 class="mt-0">Complete your onboarding</h3><span class="badge gold">Step 1/1</span></div>
+      <form id="onboarding-form" class="stack mt-3">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Username</label><input class="input" id="ob-username" required /></div>
+          <div class="form-group"><label class="form-label">Wallet</label><input class="input" id="ob-wallet" placeholder="Optional wallet label" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Role</label><select class="select" id="ob-role"><option value="player">Player</option><option value="club">Club</option><option value="scout">Scout</option><option value="agent">Agent</option></select></div>
+          <div class="form-group"><label class="form-label">Language</label><select class="select" id="ob-language"></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Sport</label><select class="select" id="ob-sport"></select></div>
+          <div class="form-group"><label class="form-label">Position / speciality</label><select class="select" id="ob-position"></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Country</label><input class="input" id="ob-country" placeholder="Country" /></div>
+          <div class="form-group"><label class="form-label">Highlight URL</label><input class="input" id="ob-highlight" placeholder="YouTube or TikTok link" /></div>
+        </div>
+        <div class="form-group"><label class="form-label">Bio</label><textarea class="textarea" id="ob-bio" placeholder="Tell clubs and scouts what makes you special."></textarea></div>
+        <button class="btn btn-primary">Finish onboarding</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await I18n.init();
+      if (window.lucide) lucide.createIcons();
+      document.getElementById('ob-language').innerHTML = I18n.optionsHTML();
+      document.getElementById('ob-language').value = I18n.getCurrentLocale();
+      document.getElementById('ob-sport').innerHTML = App.SPORTS.map((sport) => `<option value="${sport.key}">${sport.label}</option>`).join('');
+
+      const updatePositions = () => {
+        const sport = document.getElementById('ob-sport').value;
+        const options = App.SPORT_POSITIONS[sport] || ['Prospect'];
+        document.getElementById('ob-position').innerHTML = options.map((item) => `<option value="${item}">${item}</option>`).join('');
+      };
+      updatePositions();
+      document.getElementById('ob-sport').addEventListener('change', updatePositions);
+
+      document.getElementById('pi-login-btn').addEventListener('click', async () => {
+        try {
+          const result = await Auth.loginWithPi();
+          document.getElementById('ob-username').value = result.piUser.user?.username || result.piUser.username || '';
+          if (result.existingProfile?.role) {
+            location.href = 'dashboard.html';
+            return;
+          }
+          document.getElementById('onboarding-modal').classList.add('show');
+        } catch (_) {}
+      });
+
+      document.getElementById('onboarding-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+          const profile = await Auth.completeOnboarding({
+            username: document.getElementById('ob-username').value,
+            wallet: document.getElementById('ob-wallet').value,
+            role: document.getElementById('ob-role').value,
+            language: document.getElementById('ob-language').value,
+            sport: document.getElementById('ob-sport').value,
+            position: document.getElementById('ob-position').value,
+            country: document.getElementById('ob-country').value,
+            highlight: document.getElementById('ob-highlight').value,
+            bio: document.getElementById('ob-bio').value
+          });
+          Utils.toast('success', 'Welcome to ScoutMe', `${profile.username} is ready.`);
+          location.href = 'dashboard.html';
+        } catch (error) {
+          Utils.toast('error', 'Onboarding failed', error.message || 'Try again.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
